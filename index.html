@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bubble Sorting</title>
+    <link rel="stylesheet" href="https://use.typekit.net/got7cts.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Bubble Sort</h1>
+<div id="content">
+    <div id="playArea" class="ui-widget-header">
+
+        <span class="white">0</span>
+        <span class="white">1</span>
+        <span class="white">2</span>
+        <span class="white">3</span>
+        <span class="white">4</span>
+
+    </div>
+
+    <div id="code">
+        <code class="code1">var isSorted = false;</code>
+        <br/>
+        <code>&nbsp;</code>
+        <br/>
+        <code class="code2">while (!isSorted) {</code>
+        <br/>
+        <code>&nbsp;</code>
+        <br/>
+        <code class="code3">&nbsp;&nbsp;isSorted = true;</code>
+        <br/>
+        <code>&nbsp;</code>
+        <br/>
+        <code class="4">&nbsp;&nbsp;for (var i = 0; i < 5 - 1; i++) {</code>
+        <br/>
+        <code class="code5">&nbsp;&nbsp;&nbsp;&nbsp;var left = cards[i];</code>
+        <br/>
+        <code class="code5">&nbsp;&nbsp;&nbsp;&nbsp;var right = cards[i+1];</code>
+        <br/>
+        <code>&nbsp;</code>
+        <br/>
+        <code class="code7">&nbsp;&nbsp;&nbsp;&nbsp;if (right > left) {</code>
+        <br/>
+        <code class="code8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var copy = left;</code>
+        <br/>
+        <code class="code9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cards[i] = right;</code>
+        <br/>
+        <code class="code10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cards[i+1] = copy;</code>
+        <br/>
+        <code>&nbsp;</code>
+        <br/>
+        <code class="code11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isSorted = false;</code>
+        <br/>
+        <code class="code12">&nbsp;&nbsp;&nbsp;&nbsp;}</code>
+        <br/>
+        <code>&nbsp;</code>
+        <br/>
+        <code class="code13">&nbsp;&nbsp;}</code>
+        <br/>
+        <code>&nbsp;</code>
+        <br/>
+        <code class="code14">}</code>
+    </div>
+
+    <div id="copyArea" class="ui-widget-header">
+        <span class="white">Copy Area</span>
+    </div>
+
+    <div id="instructions">
+        <button class="notsorted" id="flag">Sorted? False</button>
+        <p id="text"></p>
+        <div class="yesNoButtons">
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </div>
+        <button class="next">Next!</button>
+    </div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="script.js"></script>
+
+</html>
