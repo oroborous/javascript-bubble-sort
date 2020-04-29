@@ -129,6 +129,16 @@ $(init);
 
 function init() {
     $("#flag").click(toggleSorted);
+
+    $("#faqButton").click(openModal);
+
+    $("#close").click(function(e) {
+        // Stop the "close" anchor tag from linking
+        e.preventDefault();
+        // Close the popup
+        closeModal();
+    });
+
     initDeck();
     drawFive();
     displayCards();
@@ -265,4 +275,32 @@ function shuffle(array) {
         // let t = array[i]; array[i] = array[j]; array[j] = t
         [array[i], array[j]] = [array[j], array[i]];
     }
+}
+
+function center() {
+    // Get the distance from the edge of the window to its center
+    var top = Math.max($(window).height() - $("#faq").outerHeight(), 0) / 2;
+    var left = Math.max($(window).width() - $("#faq").outerWidth(), 0) / 2;
+
+    // Position the modal window using absolute positioning
+    $("#faq").css("top", top + $(window).scrollTop());
+    $("#faq").css("left", left + $(window).scrollLeft());
+}
+
+function closeModal() {
+    $("#faq").hide();
+    $("#overlay").hide();
+    // The browser can stop resizing the modal now
+    $(window).off("resize.faq");
+}
+
+function openModal() {
+    $("#faq").show();
+    $("#overlay").show();
+
+    // Center the popup
+    center();
+
+    // Tell the window (browser) to re-center the popup when it is resized
+    $(window).on("resize.faq", center);
 }

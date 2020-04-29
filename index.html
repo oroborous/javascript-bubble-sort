@@ -8,6 +8,7 @@
 </head>
 <body>
 <h1>Bubble Sort</h1>
+<div id="overlay"></div>
 <div id="content">
     <div id="playArea" class="ui-widget-header">
 
@@ -32,7 +33,7 @@
         <br/>
         <code>&nbsp;</code>
         <br/>
-        <code class="4">&nbsp;&nbsp;for (var i = 0; i < 5 - 1; i++) {</code>
+        <code class="4">&nbsp;&nbsp;for (var i = 0; i &lt; 4; i++) {</code>
         <br/>
         <code class="code5">&nbsp;&nbsp;&nbsp;&nbsp;var left = cards[i];</code>
         <br/>
@@ -40,7 +41,7 @@
         <br/>
         <code>&nbsp;</code>
         <br/>
-        <code class="code7">&nbsp;&nbsp;&nbsp;&nbsp;if (right > left) {</code>
+        <code class="code7">&nbsp;&nbsp;&nbsp;&nbsp;if (right &lt; left) {</code>
         <br/>
         <code class="code8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var copy = left;</code>
         <br/>
@@ -76,6 +77,31 @@
         </div>
         <button class="next">Next!</button>
     </div>
+</div>
+<div id="faqButtonDiv">
+<button id="faqButton">Frequently Asked Questions</button>
+</div>
+<div id="faq">
+    What order should the cards be in?
+    <br/>
+    <div class="faqAnswer">
+    You can choose Aces-high or Aces-low, so either:
+    <br/>
+    A 2 3 4 5 6 7 8 9 10 J Q K
+    <br/>
+    or
+    <br/>
+    2 3 4 5 6 7 8 9 10 J Q K A
+    </div>
+<br/>
+    What if I made a mistake?
+    <br/>
+    <div class="faqAnswer">
+        The program won't know. It doesn't check your work.
+        <br/>If you can correct your mistake, do so and carry on.
+        <br/>If you can't, just refresh the page.
+    </div>
+    <a href='#' id='close'></a>
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

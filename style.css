@@ -14,8 +14,8 @@ h1 {
 
 #playArea {
     /* From https://www.colourlovers.com/color/076324/Card_Table_Green */
-    width: 800px;
     background: rgb(7, 99, 36);
+    width: 800px;
     vertical-align: middle;
     text-align: center;
     display: grid;
@@ -38,7 +38,7 @@ h1 {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 60px auto 60px;
-
+    border-right: 2px solid rgb(7, 99, 36);
 }
 
 #text {
@@ -48,23 +48,65 @@ h1 {
     margin: 0;
 }
 
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    display: none;
+}
+
+#faq {
+    font-size: 1.5em;
+    position:absolute;
+    background:lightgreen;
+    border-radius:14px;
+    border: 2px solid rgb(7, 99, 36);
+    padding:8px;
+    width: auto;
+    height: auto;
+    display: none;
+}
+
+div.faqAnswer {
+    font-family: monospace;
+    font-size: 0.75em;
+    padding: 10px;
+}
+
+#close {
+    position:absolute;
+    background:url(img/close.png) 0 0 no-repeat;
+    width:24px;
+    height:27px;
+    display:block;
+    top:-7px;
+    right:-7px;
+}
+
 code.running {
     font-weight: bold;
     background-color: lightgreen;
 }
 
 #content {
-    width: 1200px;
+    width: 1135px;
     margin: auto;
     display: grid;
-    grid-template-columns: 200px auto 400px;
+    grid-template-columns: 200px auto 335px;
     grid-template-rows: 350px 305px;
+    border: 2px solid rgb(7, 99, 36);
 }
 
 #code {
     color: black;
     grid-row-end: span;
-    padding-left: 20px;
+    padding-top: 30px;
+    padding-left: 30px;
 }
 
 button {
@@ -82,6 +124,15 @@ button.sorted {
 
 button.notsorted {
     background-color: lightpink;
+}
+
+#faqButton {
+    width: 400px;
+    margin: 20px auto;
+}
+
+div#faqButtonDiv {
+    text-align: center;
 }
 
 #flag {
