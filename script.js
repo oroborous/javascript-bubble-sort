@@ -1,11 +1,11 @@
-var x = 0, y = 1;
-var maxIndex = 4;
-var deck = [];
-var cardsInPlay = [];
-var iterationCount = 0;
+let x = 0, y = 1;
+let maxIndex = 4;
+let deck = [];
+let cardsInPlay = [];
+let iterationCount = 0;
 
 function toggleSorted() {
-    var button = $("#flag");
+    let button = $("#flag");
     button.toggleClass("sorted").toggleClass("notsorted");
     if (sortedFlagTrue()) {
         button.text("Sorted? True");
@@ -146,11 +146,11 @@ function init() {
 }
 
 function displayCards() {
-    var gameTable = $("#playArea");
+    let gameTable = $("#playArea");
 
-    for (var i = 0; i < cardsInPlay.length; i++) {
-        var aCard = cardsInPlay[i];
-        var aCardImg = $("<img>").addClass("card").attr("src", aCard.imageFile).attr("alt", aCard.getFriendlyName());
+    for (let i = 0; i < cardsInPlay.length; i++) {
+        let aCard = cardsInPlay[i];
+        let aCardImg = $("<img>").addClass("card").attr("src", aCard.imageFile).attr("alt", aCard.getFriendlyName());
         gameTable.prepend(aCardImg);
     }
 
@@ -162,12 +162,12 @@ function displayCards() {
 
 function drawFive() {
     drawcards: while (cardsInPlay.length < 5) {
-        var card = deck.pop();
+        let card = deck.pop();
 
         // Ensure no card with same
         // face value already in play
-        for (var i = 0; i < cardsInPlay.length; i++) {
-            var cardInPlay = cardsInPlay[i];
+        for (let i = 0; i < cardsInPlay.length; i++) {
+            let cardInPlay = cardsInPlay[i];
             if (cardInPlay.faceValue == card.faceValue) {
                 continue drawcards;
             }
@@ -179,8 +179,8 @@ function drawFive() {
 
 function initDeck() {
 
-    for (var face = 2; face <= 14; face++) {
-        var faceAbbrev, faceFriendlyName;
+    for (let face = 2; face <= 14; face++) {
+        let faceAbbrev, faceFriendlyName;
 
         switch (face) {
             case 14:
@@ -211,8 +211,8 @@ function initDeck() {
                 faceFriendlyName = faceAbbrev;
         }
 
-        for (var suit = 1; suit <= 4; suit++) {
-            var suitAbbrev, suitFriendlyName;
+        for (let suit = 1; suit <= 4; suit++) {
+            let suitAbbrev, suitFriendlyName;
             switch (suit) {
                 case 1:
                     suitAbbrev = "C";
@@ -233,7 +233,7 @@ function initDeck() {
             }
 
             // Create card object
-            var card = {
+            let card = {
                 faceValue: face,
                 faceAbbrev: faceAbbrev,
                 faceFriendlyName: faceFriendlyName,
@@ -279,8 +279,8 @@ function shuffle(array) {
 
 function center() {
     // Get the distance from the edge of the window to its center
-    var top = Math.max($(window).height() - $("#faq").outerHeight(), 0) / 2;
-    var left = Math.max($(window).width() - $("#faq").outerWidth(), 0) / 2;
+    let top = Math.max($(window).height() - $("#faq").outerHeight(), 0) / 2;
+    let left = Math.max($(window).width() - $("#faq").outerWidth(), 0) / 2;
 
     // Position the modal window using absolute positioning
     $("#faq").css("top", top + $(window).scrollTop());
