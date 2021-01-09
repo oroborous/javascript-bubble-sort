@@ -251,7 +251,7 @@ function initDeck() {
                     return 0;
                 },
                 getFriendlyName: function () {
-                    return this.faceFriendlyName + " of " + suitFriendlyName;
+                    return this.faceFriendlyName + " of " + this.suitFriendlyName;
                 }
             };
 
